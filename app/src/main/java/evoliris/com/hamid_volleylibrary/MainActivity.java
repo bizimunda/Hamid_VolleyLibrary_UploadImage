@@ -115,6 +115,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                         //Showing toast message of the response
                         Toast.makeText(MainActivity.this, s, Toast.LENGTH_LONG).show();
                         editTextName.setText("");
+                        imageView.setImageResource(android.R.color.transparent);
 
                     }
                 },
