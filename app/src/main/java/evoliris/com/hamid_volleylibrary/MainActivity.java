@@ -67,7 +67,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         if(v == buttonUpload){
             uploadImage();
-            editTextName.setText("");
+
         }
     }
 
@@ -114,6 +114,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                         loading.dismiss();
                         //Showing toast message of the response
                         Toast.makeText(MainActivity.this, s, Toast.LENGTH_LONG).show();
+                        editTextName.setText("");
+
                     }
                 },
                 new Response.ErrorListener() {
