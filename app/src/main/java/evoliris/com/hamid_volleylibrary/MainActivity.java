@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -48,11 +49,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         buttonChoose = (Button) findViewById(R.id.buttonChoose);
         buttonUpload = (Button) findViewById(R.id.buttonUpload);
-
         editTextName = (EditText) findViewById(R.id.editText);
-
         imageView  = (ImageView) findViewById(R.id.imageView);
-
         buttonChoose.setOnClickListener(this);
         buttonUpload.setOnClickListener(this);
     }
@@ -113,6 +111,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                         //Disimissing the progress dialog
                         loading.dismiss();
                         //Showing toast message of the response
+                        Log.e("Image Added", s);
                         Toast.makeText(MainActivity.this, s, Toast.LENGTH_LONG).show();
                         editTextName.setText("");
                         imageView.setImageResource(android.R.color.transparent);
